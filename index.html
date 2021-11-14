@@ -1,0 +1,46 @@
+<<html lang="ru"><head>
+    <link href="xxx.css" rel="stylesheet" type="text/css">
+<title>Калькулятор</title>
+
+<script>
+
+function click1() {
+let f1 = document.getElementsByName("field1");
+let f2 = document.getElementsByName("field2");
+let r = document.getElementById("result");
+r.innerHTML = f1[0].value * f2[0].value;
+if((f2[0].value<='0')||(f1[0].value<='0') ) {
+    r.innerHTML="undefined";
+    alert(" Ошибка, введены недопустимые значения.. ");
+}
+return false;
+}
+</script> 
+</head>
+<body>
+
+<form name="calcform">
+
+<table>
+
+<tbody><tr>
+<td>Цена товара:</td>
+<td>
+<input name="field1" type="text">
+</td>
+</tr>
+<tr>
+<td>Количество товара:</td>
+<td>
+<input name="field2" type="text">
+</td>
+</tr>
+<tr>
+<td>
+<button id="button1" onclick="return click1();">Стоимость</button>
+</td>
+<td class="a">
+<div id="result"> </div>
+</td>
+</tr>
+</tbody></table>
